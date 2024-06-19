@@ -7,17 +7,17 @@ import os
 
 class Screenshot:
     def take_screenshot(url: str) -> str:
-        # Set up Chrome options
+        # Open in chrome and remove head
         chrome_options = Options()
         chrome_options.add_argument('--headless')  # Run in headless mode
         chrome_options.add_argument('--disable-gpu')  # Disable GPU acceleration
 
-        # Set up the Chrome driver
+        # Chrome driver with options
         service = ChromeService(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=chrome_options)
     
         try:
-            # Open the URL
+            # Open the URL and add https problem if / and : occur in url
 
             driver.get('https://' + url)
             print('https://'+ url)
