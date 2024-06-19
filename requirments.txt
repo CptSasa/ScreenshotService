@@ -1,0 +1,3 @@
+fastapi
+uvicorn
+selenium  # Assuming Screenshot module uses Selenium for taking screenshots
