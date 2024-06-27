@@ -1,5 +1,5 @@
 from typing import Union
-from screenshot import Screenshot
+from .screenshot import Screenshot
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 
